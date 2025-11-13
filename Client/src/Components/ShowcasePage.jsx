@@ -3,18 +3,13 @@ import { motion } from "framer-motion";
 import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
 
 // === LOCAL IMAGES (your files) ===
-// import large from "../assets/ShowcasePage/large.webp";
-// import rightTall from "../assets/ShowcasePage/rightTall.webp";
-// import leftLarge from "../assets/ShowcasePage/leftLarge.webp";
-// import rTop from "../assets/ShowcasePage/rTop.webp";
-// import rBottom from "../assets/ShowcasePage/rBottom.webp";
-// import wide from "../assets/ShowcasePage/wide.webp";
-import large from "../assets/Homepage/Add1.png";
-import rightTall from "../assets/Homepage/Add2.webp";
-import leftLarge from "../assets/Homepage/add3.webp";
-import rTop from "../assets/Homepage/add4.png";
-import rBottom from "../assets/Homepage/add1.png";
-import wide from "../assets/Homepage/add5.png";
+import large from "../assets/ShowcasePage/large.webp";
+import rightTall from "../assets/ShowcasePage/rightTall.webp";
+import leftLarge from "../assets/ShowcasePage/leftLarge.webp";
+import rTop from "../assets/ShowcasePage/rTop.webp";
+import rBottom from "../assets/ShowcasePage/rBottom.webp";
+import wide from "../assets/ShowcasePage/wide.webp";
+
 
 // ---------- DATA ----------
 const OUTSIDE = {
