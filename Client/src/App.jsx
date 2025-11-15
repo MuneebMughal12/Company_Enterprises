@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // Components
-// import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 
@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
       <Router>  
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/exterior" element={<Extrior />} />
