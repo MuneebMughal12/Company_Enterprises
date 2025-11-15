@@ -45,7 +45,15 @@ const INSIDE = {
 // ---------- UI HELPERS ----------
 const HRule = () => <div className="h-px w-10 bg-black/20 md:w-16" aria-hidden />;
 
-const ExploreButton = ({ children = "EXPLORE MORE", href = "#!" }) => (
+const ExploreButton = ({ children = "EXPLORE MORE", href = "/exterior" }) => (
+  <a
+    href={href}
+    className="inline-flex items-center gap-2 rounded-md border border-black/20 bg-gradient-to-r from-[#727272] to-[#2d2d2d] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-95"
+  >
+    {children} <span aria-hidden>↗</span>
+  </a>
+);
+const IntriorButton = ({ children = "EXPLORE MORE", href = "/interior" }) => (
   <a
     href={href}
     className="inline-flex items-center gap-2 rounded-md border border-black/20 bg-gradient-to-r from-[#727272] to-[#2d2d2d] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-95"
@@ -244,7 +252,7 @@ export default function ShowcasePage() {
         </div>
 
         <div className="mt-4 flex justify-end">
-          <ExploreButton />
+          <IntriorButton />
         </div>
       </section>
 

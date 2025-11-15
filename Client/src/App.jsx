@@ -5,9 +5,11 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 
+
+
 // Pages
 import { Home } from "./Pages/Home.jsx";
-
+import Extrior from "./Pages/extrior.jsx";
 export default function App() {
   return (
     <>
@@ -15,6 +17,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/exterior" element={<Extrior />} />
         </Routes>
         <Footer/>
       </Router>
