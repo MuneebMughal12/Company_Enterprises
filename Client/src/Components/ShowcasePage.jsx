@@ -10,6 +10,16 @@ import rTop from "../assets/ShowcasePage/rTop.webp";
 import rBottom from "../assets/ShowcasePage/rBottom.webp";
 import wide from "../assets/ShowcasePage/wide.webp";
 
+// intrior images
+import leftTall from "../assets/ShowcasePage/leftTall.webp";
+import rightTop from "../assets/ShowcasePage/rightTop.webp";
+import rightGrid1 from "../assets/ShowcasePage/rightGrid1.webp";
+import rightGrid2 from "../assets/ShowcasePage/rightGrid2.webp";
+import rightGrid3 from "../assets/ShowcasePage/rightGrid3.webp";
+import bottom1 from "../assets/ShowcasePage/bottom1.webp";
+import bottom2 from "../assets/ShowcasePage/bottom2.webp";
+import bottom3 from "../assets/ShowcasePage/bottom3.webp";
+
 
 // ---------- DATA ----------
 const OUTSIDE = {
@@ -22,30 +32,13 @@ const INSIDE = {
   heading: "INSIDE THE VISION",
   blurb:
     "Step into lifelike interiors crafted with precision. Realistic interior renders that capture every detail, texture, and design intent.",
-  imgs: {
-    leftTall:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1600&auto=format&fit=crop",
-    rightTop:
-      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1600&auto=format&fit=crop",
-    rightGrid1:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop",
-    rightGrid2:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop",
-    rightGrid3:
-      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1200&auto=format&fit=crop",
-    bottom1:
-      "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1200&auto=format&fit=crop",
-    bottom2:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
-    bottom3:
-      "https://images.unsplash.com/photo-1501856777435-29889d1b3a5d?q=80&w=1200&auto=format&fit=crop",
-  },
+  imgs: { leftTall, rightTop, rightGrid1,  rightGrid2,  rightGrid3,  bottom1,  bottom2,  bottom3 },
 };
 
 // ---------- UI HELPERS ----------
 const HRule = () => <div className="h-px w-10 bg-black/20 md:w-16" aria-hidden />;
 
-const ExploreButton = ({ children = "EXPLORE MORE", href = "/exterior" }) => (
+const ExploreButton = ({ children = "EXPLORE MORE", href = "/3D_EXTERIOR_RENDERS" }) => (
   <a
     href={href}
     className="inline-flex items-center gap-2 rounded-md border border-black/20 bg-gradient-to-r from-[#727272] to-[#2d2d2d] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-95"

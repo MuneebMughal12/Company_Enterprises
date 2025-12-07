@@ -17,7 +17,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/exterior" element={<Extrior />} />
+          <Route path="/3D_EXTERIOR_RENDERS" element={<Extrior />} />
         </Routes>
         <Footer/>
       </Router>

@@ -1,122 +1,74 @@
 import React from "react";
 import { motion } from "framer-motion";
+import image0 from "./0.webp";
+import image3 from "./3.webp";
+import bgImage from "./0.webp";
+
 
 const exteriorImages = [
-  // Top row
-  {
-    id: 1,
-    src: "/images/exterior/exterior-1.webp",
-    alt: "Masterplan aerial exterior",
-    gridClass: "md:col-span-2",
-  },
-  {
-    id: 2,
-    src: "/images/exterior/exterior-2.webp",
-    alt: "Balcony detail",
-    gridClass: "",
-  },
-
-  // Second row
-  {
-    id: 3,
-    src: "/images/exterior/exterior-3.webp",
-    alt: "Waterfront twin towers",
-    gridClass: "",
-  },
-  {
-    id: 4,
-    src: "/images/exterior/exterior-4.webp",
-    alt: "Mid rise apartments",
-    gridClass: "",
-  },
-  {
-    id: 5,
-    src: "/images/exterior/exterior-5.webp",
-    alt: "Urban mixed use street",
-    gridClass: "",
-  },
-
-  // Third row
-  {
-    id: 6,
-    src: "/images/exterior/exterior-6.webp",
-    alt: "Dynamic façade closeup",
-    gridClass: "md:col-span-2",
-  },
-  {
-    id: 7,
-    src: "/images/exterior/exterior-7.webp",
-    alt: "City skyline sunset",
-    gridClass: "",
-  },
-  {
-    id: 8,
-    src: "/images/exterior/exterior-8.webp",
-    alt: "Luxury balcony night view",
-    gridClass: "",
-  },
-
-  // Fourth row
-  {
-    id: 9,
-    src: "/images/exterior/exterior-9.webp",
-    alt: "Hotel drop off",
-    gridClass: "",
-  },
-  {
-    id: 10,
-    src: "/images/exterior/exterior-10.webp",
-    alt: "Glass tower lobby",
-    gridClass: "",
-  },
-  {
-    id: 11,
-    src: "/images/exterior/exterior-11.webp",
-    alt: "Stepped green terraces",
-    gridClass: "",
-  },
-
-  // Fifth row
-  {
-    id: 12,
-    src: "/images/exterior/exterior-12.webp",
-    alt: "Corner tower daytime",
-    gridClass: "md:col-span-2",
-  },
-  {
-    id: 13,
-    src: "/images/exterior/exterior-13.webp",
-    alt: "Boulevard with trees",
-    gridClass: "",
-  },
-
-  // Extra images to go beyond twenty
-  { id: 14, src: "/images/exterior/exterior-14.webp", alt: "Residence 1" },
-  { id: 15, src: "/images/exterior/exterior-15.webp", alt: "Residence 2" },
-  { id: 16, src: "/images/exterior/exterior-16.webp", alt: "Residence 3" },
-  { id: 17, src: "/images/exterior/exterior-17.webp", alt: "Residence 4" },
-  { id: 18, src: "/images/exterior/exterior-18.webp", alt: "Residence 5" },
-  { id: 19, src: "/images/exterior/exterior-19.webp", alt: "Residence 6" },
-  { id: 20, src: "/images/exterior/exterior-20.webp", alt: "Residence 7" },
+  { id: 1, src: image0, alt: "Masterplan aerial exterior", gridClass: "md:col-span-2" },
+  { id: 2, src: image3, alt: "Balcony detail" },
+  { id: 3, src: image3, alt: "Waterfront twin towers" },
+  { id: 4, src: image0, alt: "Mid rise apartments" },
+  { id: 5, src: image0, alt: "Urban mixed use street" },
+  { id: 6, src: image0, alt: "Dynamic façade closeup", gridClass: "md:col-span-2" },
+  { id: 7, src: image0, alt: "City skyline sunset" },
+  { id: 8, src: image0, alt: "Luxury balcony night view" },
+  { id: 9, src: image0, alt: "Hotel drop off" },
+  { id: 10, src: image0, alt: "Glass tower lobby" },
+  { id: 11, src: image0, alt: "Stepped green terraces" },
+  { id: 12, src: image0, alt: "Corner tower daytime", gridClass: "md:col-span-2" },
+  { id: 13, src: image0, alt: "Boulevard with trees" },
+  { id: 14, src: image0, alt: "Residence 1" },
+  { id: 15, src: image0, alt: "Residence 2" },
+  { id: 16, src: image0, alt: "Residence 3" },
+  { id: 17, src: image0, alt: "Residence 4" },
+  { id: 18, src: image0, alt: "Residence 5" },
+  { id: 19, src: image0, alt: "Residence 6" },
+  { id: 20, src: image0, alt: "Residence 7" },
 ];
 
 function ExteriorRendering() {
+  const [selectedIndex, setSelectedIndex] = React.useState(null);
+
+  const openModal = (index) => {
+    setSelectedIndex(index);
+  };
+
+  const closeModal = () => setSelectedIndex(null);
+
+  const showNext = (e) => {
+    e.stopPropagation();
+    setSelectedIndex((prev) => (prev + 1) % exteriorImages.length);
+  };
+
+  const showPrev = (e) => {
+    e.stopPropagation();
+    setSelectedIndex((prev) =>
+      prev === 0 ? exteriorImages.length - 1 : prev - 1
+    );
+  };
+
   return (
     <div className="w-full bg-white text-neutral-900">
 
       {/* Hero */}
-      <section className="h-[430px] bg-[#d7d7d7] flex items-center">
+      <section
+        className="h-[730px] bg-cover bg-center bg-no-repeat flex items-center"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
         <motion.div
-          className="max-w-6xl mx-auto px-4"
+          className="w-full max-w-6xl mx-auto px-4 flex items-start"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white/90">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white/90 text-left">
             Exterior <br /> Rendering
           </h1>
         </motion.div>
       </section>
+
 
       {/* Intro */}
       <section className="max-w-6xl mx-auto px-4 py-16 md:py-20">
@@ -132,9 +84,7 @@ function ExteriorRendering() {
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-neutral-700 max-w-md">
               Your project, reimagined in stunning 3D. Our photorealistic
-              exterior renders capture every detail, texture, and play of light,
-              bringing your architecture to life and creating visuals that leave
-              a lasting impression.
+              exterior renders capture every detail, texture, and play of light.
             </p>
           </motion.div>
 
@@ -149,8 +99,7 @@ function ExteriorRendering() {
               Crafted for impact
             </p>
             <p className="mt-3 text-xs text-neutral-700">
-              A selection of our visual works curated to showcase scale,
-              atmosphere, and context for modern developments.
+              A selection of visual works curated to showcase atmosphere & scale.
             </p>
           </motion.div>
         </div>
@@ -171,13 +120,50 @@ function ExteriorRendering() {
               <motion.img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                onClick={() => openModal(index)}
+                className="w-full h-full object-cover cursor-pointer transition-transform duration-700 hover:scale-110"
                 whileHover={{ scale: 1.1 }}
               />
             </motion.div>
           ))}
         </div>
       </section>
+
+      {/* Modal */}
+      {selectedIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-[90vw] max-h-[90vh] flex items-center">
+
+            {/* Previous Button */}
+            <button
+              onClick={showPrev}
+              className="absolute left-[-60px] text-white text-4xl font-bold px-3 py-2 bg-white/20 rounded-full hover:bg-white/40"
+            >
+              ❮
+            </button>
+
+            {/* Image */}
+            <img
+              src={exteriorImages[selectedIndex].src}
+              alt="Full View"
+              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            {/* Next Button */}
+            <button
+              onClick={showNext}
+              className="absolute right-[-60px] text-white text-4xl font-bold px-3 py-2 bg-white/20 rounded-full hover:bg-white/40"
+            >
+              ❯
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
