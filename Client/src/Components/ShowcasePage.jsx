@@ -76,12 +76,10 @@ function Frame({ ratio = "16/9", className = "", children }) {
 
 // ---------- ANIMATIONS ----------
 const animations = [
-  { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } },
-  { hidden: { opacity: 0, y: -50 }, visible: { opacity: 1, y: 0 } },
-  { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } },
-  { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } },
-  { hidden: { opacity: 0, scale: 0.85 }, visible: { opacity: 1, scale: 1 } },
+  { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } },   // fade up
+  { hidden: { opacity: 0, y: -40 }, visible: { opacity: 1, y: 0 } },  // fade down
 ];
+
 
 export default function ShowcasePage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -107,7 +105,8 @@ export default function ShowcasePage() {
     ratio = "16/9",
     { fit = "object-contain md:object-cover", pos = "object-center", extra = "" } = {}
   ) => {
-    const anim = animations[index % animations.length];
+   const anim = animations[index % animations.length];
+
     return (
       <Frame ratio={ratio} className={extra}>
         <motion.img

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "emailjs-com";
 import Starting_pic from "../assets/Homepage/Startingpic.jpg";
 import Global_pic from "../assets/Homepage/Global_pic.jpg";
-import { motion, AnimatePresence } from "framer-motion";
 
 const countersData = [
   { id: 1, label: "YEARS OF EXPERIENCE", value: 20 },

@@ -46,7 +46,7 @@ export default function Navbar() {
         {/* Desktop menu */}
         <ul className="hidden md:flex items-center text-white/95">
           <li className="pr-6">
-            <a href="/about" className={link}>ABOUT</a>
+            <a href="/ABOUT_US" className={link}>ABOUT</a>
           </li>
           <li className="mx-2 h-5 w-px bg-white/30" aria-hidden />
           <li className="relative px-6" onMouseEnter={openDropdown} onMouseLeave={delayClose}>
@@ -56,18 +56,17 @@ export default function Navbar() {
             </button>
             {dropdownOpen && (
               <div className="absolute left-0 mt-3 w-56 rounded-xl border border-white/10 bg-neutral-900/95 p-2 shadow-xl backdrop-blur">
-                <a href="/3D_WALKTHROUGHS" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">3D WALKTHROUGHS</a>
                 <a href="/3D_EXTERIOR_RENDERS" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">3D EXTERIOR RENDERS</a>
                 <a href="/3D_INTERIOR_RENDERS" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">3D INTERIOR RENDERS</a>
-                <a href="/360_VIRTUAL_TOURS" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">360 VIRTUAL TOURS</a>
-                <a href="/BRAND_IDENTITY_DESIGN" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">BRAND IDENTITY DESIGN</a>
+                <a href="/SOIL_TESTING" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">SOIL TESTING</a>
+                {/* <a href="/BRAND_IDENTITY_DESIGN" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">BRAND IDENTITY DESIGN</a> */}
                 <a href="/OUTDOOR_MEDIA_DESIGN" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">OUTDOOR MEDIA DESIGN</a>
               </div>
             )}
           </li>
           <li className="mx-2 h-5 w-px bg-white/30" aria-hidden />
           <li className="pl-6">
-            <a href="/enquire" className={link}>ENQUIRE</a>
+            <a href="/ENQUIRY" className={link}>ENQUIRE</a>
           </li>
         </ul>
 

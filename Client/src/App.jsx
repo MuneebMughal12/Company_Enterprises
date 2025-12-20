@@ -7,9 +7,13 @@ import Footer from "./Components/Footer";
 
 
 
+
 // Pages
 import { Home } from "./Pages/Home.jsx";
 import Extrior from "./Pages/extrior.jsx";
+import Aboutus from "./Pages/Aboutus.jsx";
+import Enquiry from "./Pages/enquiey.jsx"
+
 export default function App() {
   return (
     <>
@@ -18,6 +22,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/3D_EXTERIOR_RENDERS" element={<Extrior />} />
+          <Route path="/ABOUT_US" element={<Aboutus />} />
+          <Route path="/ENQUIRY" element={<Enquiry />} />
+
         </Routes>
         <Footer/>
       </Router>
