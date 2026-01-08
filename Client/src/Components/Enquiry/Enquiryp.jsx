@@ -91,7 +91,7 @@ export default function ContactSection() {
 
             <div className="mt-8 h-px w-40 bg-black/30" />
 
-            <p className="mt-10 max-w-md text-[13px] leading-7 text-black/55">
+            <p className="mt-10 max-w-md text-[16px] leading-7 text-black/55">
               Ready to take the next step towards turning your architectural
               dreams into reality? The Pixarch team is here to assist you every
               step of the way. Whether you have questions, inquiries, or are
@@ -111,7 +111,7 @@ export default function ContactSection() {
                     />
                   </svg>
                 </span>
-                <span className="tracking-wide">++923453814080</span>
+                <span className="tracking-wide">+923453814080</span>
               </div>
 
               <div className="flex items-center gap-4">
@@ -125,7 +125,7 @@ export default function ContactSection() {
                     />
                   </svg>
                 </span>
-                <span className="tracking-wide">++923119019327</span>
+                <span className="tracking-wide">+923119019327</span>
               </div>
 
               <div className="flex items-center gap-4">
@@ -151,7 +151,7 @@ export default function ContactSection() {
             </div>
 
             <div className="mt-12 flex items-center gap-6">
-              <span className="text-[13px] tracking-wide text-black/70">
+              <span className="text-[16px] tracking-wide text-black/70">
                 Follow Us
               </span>
               <div className="flex items-center gap-3">
@@ -170,7 +170,7 @@ export default function ContactSection() {
 
           {/* RIGHT COLUMN (slide from right) */}
           <SlideIn from="right" delay={80}>
-            <p className="max-w-xl text-[13px] leading-7 text-black/55">
+            <p className="max-w-xl text-[16px] leading-7 text-black/55">
               Our team of experts works closely with you to create a bespoke 3D
               Visualization experience that is tailored to your specific needs.
             </p>
@@ -200,7 +200,7 @@ export default function ContactSection() {
                 />
 
                 <div className="relative">
-                  <select className="input-base h-12 w-full appearance-none border border-black/25 bg-white px-4 text-[13px] text-black/60">
+                  <select className="input-base h-12 w-full appearance-none border border-black/25 bg-white px-4 text-[16px] text-black/60">
                     <option>Services</option>
                     <option>3D Visualization</option>
                     <option>Walkthroughs</option>
@@ -230,7 +230,7 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                className="h-12 rounded-sm bg-black px-10 text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-black/90 active:scale-[0.99]"
+                className="h-12 rounded-sm bg-black px-10 text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-gray-600 active:scale-[0.99]"
               >
                 Get Started
               </button>

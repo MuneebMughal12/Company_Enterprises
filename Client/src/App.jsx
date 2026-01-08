@@ -23,7 +23,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/3d_exterior_renders" element={<Extrior />} />
-          <Route path="/about_us" element={<Aboutus />} />
+          <Route path="/about" element={<Aboutus />} />
           <Route path="/enquiry" element={<Enquiry />} />
           <Route path="/company_profile" element={<Fliperbook />} />
 

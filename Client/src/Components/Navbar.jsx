@@ -59,7 +59,7 @@ export default function Navbar() {
         {/* Desktop menu */}
         <ul className="hidden md:flex items-center text-white/95">
           <li className="pr-6">
-            <Link to="/about_us" className={link}>
+            <Link to="/about" className={link}>
               ABOUT
             </Link>
           </li>

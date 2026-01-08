@@ -1,11 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
-/**
- * AboutUs.jsx
- * React + Tailwind only (no backend).
- * Animations: CSS + IntersectionObserver (scroll reveal), hover, accordion.
- */
+
 
 function useInView(options = { threshold: 0.15 }) {
   const ref = useRef(null);
@@ -49,10 +45,10 @@ function Card({ title, desc, tone = "light" }) {
 
   return (
     <div className={`${base} ${tones} p-10 md:p-12`}>
-      <h3 className="text-[13px] font-semibold tracking-[0.14em] uppercase text-black/90">
+      <h3 className="text-[14px] font-semibold tracking-[0.14em] uppercase text-black/90">
         {title}
       </h3>
-      <p className="mt-4 max-w-sm text-[12px] leading-6 text-black/60">
+      <p className="mt-4 max-w-sm text-[16px] leading-6 text-black/60">
         {desc}
       </p>
     </div>
@@ -79,7 +75,7 @@ function Accordion({ items }) {
               <span className="text-[12px] font-semibold tracking-[0.12em] uppercase text-black/80">
                 {it.title}
               </span>
-              <span className="select-none text-xl text-black/60">
+              <span className="select-none text-lg text-black/60">
                 {isOpen ? "–" : "+"}
               </span>
             </button>
@@ -91,7 +87,7 @@ function Accordion({ items }) {
               ].join(" ")}
             >
               <div className="py-4">
-                <p className="text-[12px] leading-6 text-black/60">{it.body}</p>
+                <p className="text-[16px] leading-6 text-black/60">{it.body}</p>
               </div>
             </div>
           </div>
@@ -175,7 +171,7 @@ export default function AboutUs() {
           </Reveal>
 
           <Reveal delay={120}>
-            <p className="max-w-md text-[12px] leading-6 text-black/60">
+            <p className="max-w-md text-[16px] leading-6 text-black/60">
               We equip property developers, marketers, architects and sales teams
               with compelling CGI visuals, dynamic animations and advanced
               presentation tools that bring their projects to life.
@@ -212,7 +208,7 @@ export default function AboutUs() {
                 <h3 className="text-[14px] font-semibold text-black/85">
                   The Experience
                 </h3>
-                <p className="mt-5 text-[12px] leading-6 text-black/60">
+                <p className="mt-5 text-[16px] leading-6 text-black/60">
                   We design walkthroughs tailored to your project, shaping every
                   element of the space to guide customers naturally towards a
                   purchase decision. To achieve the highest standard of
@@ -265,10 +261,10 @@ export default function AboutUs() {
         <div className="grid gap-14 md:grid-cols-2 md:gap-16">
           <div>
             <Reveal>
-              <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-black/90">
+              <h3 className="text-[14px] font-semibold uppercase tracking-[0.14em] text-black/90">
                 Who We Are
               </h3>
-              <p className="mt-5 max-w-md text-[12px] leading-6 text-black/60">
+              <p className="mt-5 max-w-md text-[16px] leading-6 text-black/60">
                 Pixarch is Pakistan&apos;s leading creative content studio. We
                 specialise in producing digital assets that elevate projects
                 across luxury residential, real estate, commercial and cultural
@@ -279,10 +275,10 @@ export default function AboutUs() {
             </Reveal>
 
             <Reveal delay={120} className="mt-12">
-              <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-black/90">
+              <h3 className="text-[14px] font-semibold uppercase tracking-[0.14em] text-black/90">
                 What We Offer
               </h3>
-              <ul className="mt-5 space-y-2 text-[12px] text-black/60">
+              <ul className="mt-5 space-y-2 text-[16px] text-black/60">
                 {[
                   "3D Animation",
                   "VR Experience",
@@ -306,7 +302,7 @@ export default function AboutUs() {
 
           <div>
             <Reveal>
-              <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-black/90">
+              <h3 className="text-[14px] font-semibold uppercase tracking-[0.14em] text-black/90">
                 Why Choose Us?
               </h3>
             </Reveal>
@@ -339,10 +335,10 @@ export default function AboutUs() {
       {/* GET A QUOTE */}
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <Reveal>
-          <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-black/90">
+          <h3 className="text-[14px] font-semibold uppercase tracking-[0.14em] text-black/90">
             Get A Quote
           </h3>
-          <p className="mt-3 max-w-2xl text-[12px] leading-6 text-black/60">
+          <p className="mt-3 max-w-2xl text-[16px] leading-6 text-black/60">
             Our team of experts works closely with you to create a bespoke 3D
             visualization experience that is tailored to your specific needs.
           </p>
@@ -358,7 +354,7 @@ export default function AboutUs() {
               placeholder="Full Name"
               type="text"
             />
-            <select className="h-10 w-full border border-black/20 bg-white px-3 text-[12px] outline-none transition focus:border-black/50">
+            <select className="h-10 w-full border border-black/20 bg-white px-3 text-[14px] outline-none transition focus:border-black/50">
               <option>Services</option>
               <option>3D Animation</option>
               <option>VR Experience</option>
@@ -367,14 +363,14 @@ export default function AboutUs() {
               <option>Marketing</option>
             </select>
             <input
-              className="h-10 w-full border border-black/20 bg-white px-3 text-[12px] outline-none transition focus:border-black/50"
+              className="h-10 w-full border border-black/20 bg-white px-3 text-[14px] outline-none transition focus:border-black/50"
               placeholder="Contact No."
               type="tel"
             />
 
             <button
               type="submit"
-              className="h-10 w-full bg-black px-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-black/90 active:scale-[0.99] md:ml-auto md:w-[160px]"
+              className="h-10 w-full bg-black px-4 text-[13px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-gray-600 active:scale-[0.99] md:ml-auto md:w-[160px]"
             >
               Send Enquiry
             </button>

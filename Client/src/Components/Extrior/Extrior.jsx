@@ -233,13 +233,27 @@ const exteriorImages = [
 ];
 
 const fadeVariants = {
-  up: { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } },
-  down: { hidden: { opacity: 0, y: -40 }, visible: { opacity: 1, y: 0 } },
-  left: { hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0 } },
-  right: { hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } },
+  up: {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  },
+  down: {
+    hidden: { opacity: 0, y: -40 },
+    visible: { opacity: 1, y: 0 },
+  },
+  zoomIn: {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1 },
+  },
+  zoomOut: {
+    hidden: { opacity: 0, scale: 1.1 },
+    visible: { opacity: 1, scale: 1 },
+  },
 };
 
-const fadePattern = ["up", "down", "left", "right"];
+
+const fadePattern = ["up", "down", "zoomIn", "zoomOut"];
+
 
 function ExteriorRendering() {
   const [selectedIndex, setSelectedIndex] = React.useState(null);
@@ -261,6 +275,7 @@ function ExteriorRendering() {
       prev === 0 ? exteriorImages.length - 1 : prev - 1
     );
   };
+
 
   // Mobile slider navigation
   const nextSlide = () =>
@@ -349,8 +364,8 @@ function ExteriorRendering() {
       </section>
 
       {/* DESKTOP GRID */}
-      <section className="hidden md:block max-w-full mx-auto px-4 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-3">
+      <section className="hidden md:block w-full pb-20 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {exteriorImages.map((img, index) => {
             const direction = fadePattern[index % fadePattern.length];
             const anim = fadeVariants[direction];
@@ -369,13 +384,14 @@ function ExteriorRendering() {
                   src={img.src}
                   alt={img.alt}
                   onClick={() => openModal(index)}
-                  className="w-full h-full object-cover cursor-pointer transition-transform duration-700 hover:scale-110"
+                  className="w-full h-[420px] object-cover cursor-pointer transition-transform duration-700 hover:scale-110"
                 />
               </motion.div>
             );
           })}
         </div>
       </section>
+
 
       {/* Modal (unchanged) */}
       {selectedIndex !== null && (
