@@ -56,11 +56,11 @@ export default function Navbar() {
             </button>
             {dropdownOpen && (
               <div className="absolute left-0 mt-3 w-56 rounded-xl border border-white/10 bg-neutral-900/95 p-2 shadow-xl backdrop-blur">
+                <a href="/Structural_Design  " className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">Structural Design </a>
+                <a href="/Architectural_Design " className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">Architectural Design </a>
+                <a href="/MEP_Design " className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">MEP Design </a>
                 <a href="/3D_EXTERIOR_RENDERS" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">3D EXTERIOR RENDERS</a>
                 <a href="/3D_INTERIOR_RENDERS" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">3D INTERIOR RENDERS</a>
-                <a href="/SOIL_TESTING" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">SOIL TESTING</a>
-                {/* <a href="/BRAND_IDENTITY_DESIGN" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">BRAND IDENTITY DESIGN</a> */}
-                <a href="/OUTDOOR_MEDIA_DESIGN" className="block rounded-md px-3 py-2 text-sm text-white/90 hover:bg-white/10">OUTDOOR MEDIA DESIGN</a>
               </div>
             )}
           </li>
@@ -68,8 +68,15 @@ export default function Navbar() {
           <li className="pl-6">
             <a href="/ENQUIRY" className={link}>ENQUIRE</a>
           </li>
+          <li className="mx-2 h-5 w-px bg-white/30" aria-hidden />
+          <li className="pl-6">
+          <a href="/COPMANY_PROFILE" className={link}>COPMANY PROFILE</a>
+          </li>
+
+
         </ul>
 
+            
         {/* Mobile menu button */}
         <button className="ml-auto md:hidden" onClick={toggleMobileMenu}>
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -79,7 +86,7 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-neutral-900/95 border-t border-white/10 md:hidden shadow-xl backdrop-blur z-50">
             <ul className="flex flex-col p-4 gap-2">
-              <li><a href="/about" className="text-sm font-semibold text-white/90 hover:text-white">ABOUT</a></li>
+              <li><a href="/ABOUT_US" className="text-sm font-semibold text-white/90 hover:text-white">ABOUT</a></li>
               <li>
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -90,16 +97,17 @@ export default function Navbar() {
                 </button>
                 {dropdownOpen && (
                   <ul className="mt-2 ml-4 flex flex-col gap-1">
-                    <li><a href="/3D_WALKTHROUGHS" className="text-sm text-white/80 hover:text-white">3D WALKTHROUGHS</a></li>
+                    <li><a href="/Structural_Design  " className="text-sm text-white/80 hover:text-white">Structural Design </a></li>
+                    <li><a href="/Architectural_Design " className="text-sm text-white/80 hover:text-white">Architectural Design </a></li>
+                    <li><a href="/MEP_Design " className="text-sm text-white/80 hover:text-white">MEP Design </a></li>
                     <li><a href="/3D_EXTERIOR_RENDERS" className="text-sm text-white/80 hover:text-white">3D EXTERIOR RENDERS</a></li>
                     <li><a href="/3D_INTERIOR_RENDERS" className="text-sm text-white/80 hover:text-white">3D INTERIOR RENDERS</a></li>
-                    <li><a href="/360_VIRTUAL_TOURS" className="text-sm text-white/80 hover:text-white">360 VIRTUAL TOURS</a></li>
-                    <li><a href="/BRAND_IDENTITY_DESIGN" className="text-sm text-white/80 hover:text-white">BRAND IDENTITY DESIGN</a></li>
-                    <li><a href="/OUTDOOR_MEDIA_DESIGN" className="text-sm text-white/80 hover:text-white">OUTDOOR MEDIA DESIGN</a></li>
+                    <li><a href="/SOIL_TESTING" className="text-sm text-white/80 hover:text-white">SOIL TESTING</a></li>
                   </ul>
                 )}
               </li>
               <li><a href="/enquire" className="text-sm font-semibold text-white/90 hover:text-white">ENQUIRE</a></li>
+              <li><a href="/company_profile" className="text-sm font-semibold text-white/90 hover:text-white">COMPANY PROFILE</a></li>
             </ul>
           </div>
         )}

@@ -87,8 +87,8 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-black/75">
               {[
-                { name: "ABOUT", href: "/about" },
-                { name: "CONTACT", href: "/contact" },
+                { name: "ABOUT", href: "/ABOUT_US" },
+                { name: "CONTACT", href: "/ENQUIRY" },
               ].map((l) => (
                 <li key={l.name}>
                   <a href={l.href} className="hover:text-black">

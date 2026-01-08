@@ -13,6 +13,7 @@ import { Home } from "./Pages/Home.jsx";
 import Extrior from "./Pages/extrior.jsx";
 import Aboutus from "./Pages/Aboutus.jsx";
 import Enquiry from "./Pages/enquiey.jsx"
+import Fliperbook from "./Pages/Fliperbook.jsx";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/3D_EXTERIOR_RENDERS" element={<Extrior />} />
           <Route path="/ABOUT_US" element={<Aboutus />} />
           <Route path="/ENQUIRY" element={<Enquiry />} />
+          <Route path="/COPMANY_PROFILE" element={<Fliperbook />} />
 
         </Routes>
         <Footer/>
